@@ -47,6 +47,7 @@ export default defineComponent({
         { path: '/switch', label: 'Switch' },
         { path: '/modal', label: 'Modal' },
         { path: '/tabs', label: 'Tabs' },
+        { path: '/select', label: 'Select' },
       ],
     }
   },
