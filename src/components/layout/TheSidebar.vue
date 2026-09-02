@@ -45,6 +45,7 @@ export default defineComponent({
         { path: '/badges', label: 'Badges' },
         { path: '/tooltips', label: 'Tooltips' },
         { path: '/switch', label: 'Switch' },
+        { path: '/modal', label: 'Modal' },
       ],
     }
   },

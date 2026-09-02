@@ -61,6 +61,11 @@ const router = createRouter({
       name: 'grid',
       component: () => import('../views/GridView.vue'),
     },
+    {
+      path: '/modal',
+      name: 'modal',
+      component: () => import('../views/ModalView.vue'),
+    },
   ],
 })
 
