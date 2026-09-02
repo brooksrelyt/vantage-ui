@@ -25,17 +25,24 @@
     <DocSection title="Disabled" :code="disabledCode">
       <VtSelect label="Region" placeholder="Unavailable" :options="regionOptions" disabled />
     </DocSection>
+
+    <SourceSection :source="vtSelectSource" filename="VtSelect.vue" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import VtSelect from '@/components/ui/VtSelect.vue'
+import VtSelectSource from '@/components/ui/VtSelect.vue?raw'
 import DocSection from '@/components/docs/DocSection.vue'
+import SourceSection from '@/components/docs/SourceSection.vue'
 
 export default defineComponent({
   name: 'SelectView',
-  components: { VtSelect, DocSection },
+  components: { VtSelect, DocSection, SourceSection },
+  setup() {
+    return { vtSelectSource: VtSelectSource }
+  },
   data() {
     return {
       fruit: '',

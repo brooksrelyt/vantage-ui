@@ -69,18 +69,25 @@
         </template>
       </VtModal>
     </DocSection>
+
+    <SourceSection :source="vtModalSource" filename="VtModal.vue" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import VtModal from '@/components/ui/VtModal.vue'
+import VtModalSource from '@/components/ui/VtModal.vue?raw'
 import VtButton from '@/components/ui/VtButton.vue'
 import DocSection from '@/components/docs/DocSection.vue'
+import SourceSection from '@/components/docs/SourceSection.vue'
 
 export default defineComponent({
   name: 'ModalView',
-  components: { VtModal, VtButton, DocSection },
+  components: { VtModal, VtButton, DocSection, SourceSection },
+  setup() {
+    return { vtModalSource: VtModalSource }
+  },
   data() {
     return {
       showBasic: false,

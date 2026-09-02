@@ -6,17 +6,24 @@
     <DocSection title="Switch" description="Toggle state, bound with v-model." :code="switchCode">
       <VtSwitch v-model="notifications" label="Email notifications" />
     </DocSection>
+
+    <SourceSection :source="vtSwitchSource" filename="VtSwitch.vue" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import VtSwitch from '@/components/ui/VtSwitch.vue'
+import VtSwitchSource from '@/components/ui/VtSwitch.vue?raw'
 import DocSection from '@/components/docs/DocSection.vue'
+import SourceSection from '@/components/docs/SourceSection.vue'
 
 export default defineComponent({
   name: 'ToggleView',
-  components: { VtSwitch, DocSection },
+  components: { VtSwitch, DocSection, SourceSection },
+  setup() {
+    return { vtSwitchSource: VtSwitchSource }
+  },
   data() {
     return {
       notifications: false,

@@ -19,17 +19,24 @@
       <VtBadge variant="success" dot>Online</VtBadge>
       <VtBadge variant="danger" dot>Offline</VtBadge>
     </DocSection>
+
+    <SourceSection :source="vtBadgeSource" filename="VtBadge.vue" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import VtBadge from '@/components/ui/VtBadge.vue'
+import VtBadgeSource from '@/components/ui/VtBadge.vue?raw'
 import DocSection from '@/components/docs/DocSection.vue'
+import SourceSection from '@/components/docs/SourceSection.vue'
 
 export default defineComponent({
   name: 'BadgesView',
-  components: { VtBadge, DocSection },
+  components: { VtBadge, DocSection, SourceSection },
+  setup() {
+    return { vtBadgeSource: VtBadgeSource }
+  },
   data() {
     return {
       variantsCode: `<VtBadge variant="neutral">Neutral</VtBadge>

@@ -31,18 +31,25 @@
         2.1 AA standards.
       </p>
     </DocSection>
+
+    <SourceSection :source="vtTooltipSource" filename="VtTooltip.vue" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import VtTooltip from '@/components/ui/VtTooltip.vue'
+import VtTooltipSource from '@/components/ui/VtTooltip.vue?raw'
 import VtButton from '@/components/ui/VtButton.vue'
 import DocSection from '@/components/docs/DocSection.vue'
+import SourceSection from '@/components/docs/SourceSection.vue'
 
 export default defineComponent({
   name: 'TooltipsView',
-  components: { VtTooltip, VtButton, DocSection },
+  components: { VtTooltip, VtButton, DocSection, SourceSection },
+  setup() {
+    return { vtTooltipSource: VtTooltipSource }
+  },
   data() {
     return {
       code: `<VtTooltip text="I'm on top" position="top">

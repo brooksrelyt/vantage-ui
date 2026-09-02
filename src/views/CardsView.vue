@@ -20,18 +20,25 @@
         No header or footer — those sections just don't render.
       </VtCard>
     </DocSection>
+
+    <SourceSection :source="vtCardSource" filename="VtCard.vue" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import VtCard from '@/components/ui/VtCard.vue'
+import VtCardSource from '@/components/ui/VtCard.vue?raw'
 import VtButton from '@/components/ui/VtButton.vue'
 import DocSection from '@/components/docs/DocSection.vue'
+import SourceSection from '@/components/docs/SourceSection.vue'
 
 export default defineComponent({
   name: 'CardsView',
-  components: { VtCard, VtButton, DocSection },
+  components: { VtCard, VtButton, DocSection, SourceSection },
+  setup() {
+    return { vtCardSource: VtCardSource }
+  },
   data() {
     return {
       basicCode: `<VtCard>

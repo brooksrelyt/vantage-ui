@@ -27,21 +27,26 @@
     <DocSection title="Disabled state" :code="disabledCode">
       <VtButton disabled>Can't touch this</VtButton>
     </DocSection>
+
+    <SourceSection :source="vtButtonSource" filename="VtButton.vue" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import VtButton from '@/components/ui/VtButton.vue'
+import VtButtonSource from '@/components/ui/VtButton.vue?raw'
 import DocSection from '@/components/docs/DocSection.vue'
+import SourceSection from '@/components/docs/SourceSection.vue'
 
 export default defineComponent({
   name: 'ButtonsView',
-  components: { VtButton, DocSection },
+  components: { VtButton, DocSection, SourceSection },
 
   data() {
     return {
       count: 0,
+      vtButtonSource: VtButtonSource,
       variantsCode: `<VtButton variant="primary">Primary</VtButton>
 <VtButton variant="secondary">Secondary</VtButton>
 <VtButton variant="danger">Danger</VtButton>

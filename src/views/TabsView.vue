@@ -63,21 +63,30 @@
         </VtTab>
       </VtTabs>
     </DocSection>
+
+    <SourceSection :source="vtTabsSource" filename="VtTabs.vue" />
+    <SourceSection :source="vtTabSource" filename="VtTab.vue" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import VtTabs from '@/components/ui/VtTabs.vue'
+import VtTabsSource from '@/components/ui/VtTabs.vue?raw'
 import VtTab from '@/components/ui/VtTab.vue'
+import VtTabSource from '@/components/ui/VtTab.vue?raw'
 import VtAlert from '@/components/ui/VtAlert.vue'
 import VtInput from '@/components/ui/VtInput.vue'
 import VtButton from '@/components/ui/VtButton.vue'
 import DocSection from '@/components/docs/DocSection.vue'
+import SourceSection from '@/components/docs/SourceSection.vue'
 
 export default defineComponent({
   name: 'TabsView',
-  components: { VtTabs, VtTab, VtAlert, VtInput, VtButton, DocSection },
+  components: { VtTabs, VtTab, VtAlert, VtInput, VtButton, DocSection, SourceSection },
+  setup() {
+    return { vtTabsSource: VtTabsSource, vtTabSource: VtTabSource }
+  },
   data() {
     return {
       basicCode: `<VtTabs>

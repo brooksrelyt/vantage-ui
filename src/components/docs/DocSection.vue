@@ -8,7 +8,7 @@
       <slot />
     </div>
 
-    <!-- Source snippet, shown via CodeBlock -->
+    <!-- Usage snippet -->
     <CodeBlock v-if="code" :code="code" />
   </section>
 </template>
@@ -19,9 +19,6 @@ import CodeBlock from './CodeBlock.vue'
 
 export default defineComponent({
   name: 'DocSection',
-  // Registering a child component locally makes it available in this
-  // component's <template> only — good practice over global registration,
-  // since it makes dependencies explicit and helps tree-shaking.
   components: { CodeBlock },
   props: {
     title: { type: String, required: true },

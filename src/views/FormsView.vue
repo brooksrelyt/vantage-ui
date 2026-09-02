@@ -29,18 +29,27 @@
     >
       <VtTextarea v-model="message" label="Message" placeholder="Write something..." />
     </DocSection>
+
+    <SourceSection :source="vtInputSource" filename="VtInput.vue" />
+    <SourceSection :source="vtTextareaSource" filename="VtTextarea.vue" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import VtInput from '@/components/ui/VtInput.vue'
-import DocSection from '@/components/docs/DocSection.vue'
+import VtInputSource from '@/components/ui/VtInput.vue?raw'
 import VtTextarea from '@/components/ui/VtTextarea.vue'
+import VtTextareaSource from '@/components/ui/VtTextarea.vue?raw'
+import DocSection from '@/components/docs/DocSection.vue'
+import SourceSection from '@/components/docs/SourceSection.vue'
 
 export default defineComponent({
   name: 'FormsView',
-  components: { VtInput, DocSection, VtTextarea },
+  components: { VtInput, VtTextarea, DocSection, SourceSection },
+  setup() {
+    return { vtInputSource: VtInputSource, vtTextareaSource: VtTextareaSource }
+  },
 
   data() {
     return {
