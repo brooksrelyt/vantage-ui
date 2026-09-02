@@ -1,0 +1,40 @@
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--vt-font-sans);
+  color: var(--vt-color-text);
+  background: var(--vt-color-bg);
+  font-size: var(--vt-text-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+code {
+  font-family: var(--vt-font-mono);
+  font-size: 0.9em;
+}
+
+a {
+  color: var(--vt-color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

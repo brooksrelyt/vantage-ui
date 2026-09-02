@@ -1,0 +1,9 @@
+import{a as e,c as t,d as n,f as r,g as i,h as a,l as o,m as s,n as c,s as l,t as u,u as d}from"./index-ChTsxk3Z.js";import{t as f}from"./DocSection-C8HL5fai.js";var p=n({name:`VtCard`}),m={class:`vt-card`},h={key:0,class:`vt-card__header`},g={class:`vt-card__body`},_={key:1,class:`vt-card__footer`};function v(n,i,a,o,c,u){return r(),t(`div`,m,[n.$slots.header?(r(),t(`header`,h,[s(n.$slots,`header`,{},void 0,!0)])):l(``,!0),e(`div`,g,[s(n.$slots,`default`,{},void 0,!0)]),n.$slots.footer?(r(),t(`footer`,_,[s(n.$slots,`footer`,{},void 0,!0)])):l(``,!0)])}var y=n({name:`CardsView`,components:{VtCard:c(p,[[`render`,v],[`__scopeId`,`data-v-cc4e4b14`]]),VtButton:u,DocSection:f},data(){return{basicCode:`<VtCard>
+  <template #header>Project Alpha</template>
+  Cards group related content and actions into a single container.
+  <template #footer>
+    <VtButton size="sm">View details</VtButton>
+  </template>
+</VtCard>`,bodyOnlyCode:`<VtCard>
+  No header or footer — those sections just don't render.
+</VtCard>`}}});function b(n,s,c,l,u,f){let p=a(`VtButton`),m=a(`VtCard`),h=a(`DocSection`);return r(),t(`div`,null,[s[4]||=e(`h1`,null,`Cards`,-1),s[5]||=e(`p`,null,` Cards use named slots for an optional header and footer, plus a default slot for the body. `,-1),d(h,{title:`Basic card`,code:n.basicCode},{default:i(()=>[d(m,{style:{width:`320px`}},{header:i(()=>[...s[0]||=[o(`Project Alpha`,-1)]]),footer:i(()=>[d(p,{size:`sm`},{default:i(()=>[...s[1]||=[o(`View details`,-1)]]),_:1})]),default:i(()=>[s[2]||=o(` Cards group related content and actions into a single container. `,-1)]),_:1})]),_:1},8,[`code`]),d(h,{title:`Body only`,code:n.bodyOnlyCode},{default:i(()=>[d(m,{style:{width:`320px`}},{default:i(()=>[...s[3]||=[o(` No header or footer — those sections just don't render. `,-1)]]),_:1})]),_:1},8,[`code`])])}var x=c(y,[[`render`,b]]);export{x as default};
