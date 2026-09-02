@@ -46,6 +46,7 @@ export default defineComponent({
         { path: '/tooltips', label: 'Tooltips' },
         { path: '/switch', label: 'Switch' },
         { path: '/modal', label: 'Modal' },
+        { path: '/tabs', label: 'Tabs' },
       ],
     }
   },
